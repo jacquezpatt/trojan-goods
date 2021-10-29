@@ -12,6 +12,9 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import Dashboard from './pages/Dashboard';
+
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -48,6 +51,9 @@ function App() {
           <div>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/dashboard">
+              <Dashboard />
             </Route>
             <Route exact path="/login">
               <Login />

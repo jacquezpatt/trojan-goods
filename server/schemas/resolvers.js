@@ -45,6 +45,10 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addItem: async (_, args) => {
+      const item = await Item.create(args);
+      return item;
     }
   }
 };

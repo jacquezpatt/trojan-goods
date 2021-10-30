@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Item } = require('../models');
 
 const resolvers = {
   Query: {
@@ -15,6 +15,12 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    items: async () => {
+      return Item.find();
+    },
+    item: async (_, args) => {
+      return Item.findOne({ _id: args.id });
+    }
   },
 
   Mutation: {

@@ -47,8 +47,9 @@ const Signup = () => {
       )
     } 
     return (
-      <form onSubmit={handleFormSubmit}>
+      <form className="form-group" onSubmit={handleFormSubmit}>
         <input
+          className="form-control mb-3"
           placeholder="Your username"
           name="username"
           type="text"
@@ -56,6 +57,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <input
+          className="form-control mb-3"
           placeholder="Your email"
           name="email"
           type="email"
@@ -63,13 +65,14 @@ const Signup = () => {
           onChange={handleChange}
         />
         <input
+          className="form-control mb-3"
           placeholder="******"
           name="password"
           type="password"
           value={formState.password}
           onChange={handleChange}
         />
-        <button type="submit">
+        <button className="btn btn-primary" type="submit">
           Submit
         </button>
       </form>
@@ -77,7 +80,7 @@ const Signup = () => {
   };
 
   return (
-    <main>
+    <main class="navbar-text">
       <h4>Sign Up</h4>
       <div>
         {renderForm()}
